@@ -1,0 +1,38 @@
+<div class="main-container">
+
+  <div class="login-container">
+    <h1 class="header-text"
+        [ngClass]="{'has-success' : loginForm.valid}">Вход</h1>
+
+    <form [formGroup]="loginForm" (submit)="login()" novalidate>
+
+
+      <div class="input-container"
+           [ngClass]="{'has-content' : loginForm.value.email.length > 0}">
+        <input [ngClass]="{'has-success' : loginForm.controls.email.valid}"
+                class="login-input" type="email" id="email" readonly
+        formControlName="email" (focus)="removeReadOnly($event)">
+        <label for="email" [ngClass]="{'has-success' : loginForm.controls.email.valid}">
+          Email
+        </label>
+
+      </div>
+
+      <div class="input-container"
+           [ngClass]="{'has-content' : loginForm.value.password.length > 0}">
+        <input [ngClass]="{'has-success' : loginForm.controls.password.valid}"
+                class="login-input" type="password" id="pass" readonly
+        formControlName="password" (focus)="removeReadOnly($event)">
+        <label for="pass" [ngClass]="{'has-success' : loginForm.controls.password.valid}">
+          Password
+        </label>
+      </div>
+
+      <button [ngClass]="{'has-success' : loginForm.valid}"
+        class="login-button">войти</button>
+    </form>
+
+    <!--<span>Already registered ?</span>-->
+
+  </div>
+</div>

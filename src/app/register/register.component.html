@@ -1,0 +1,80 @@
+<div class="main-container">
+
+  <div class="login-container">
+    <h1 class="header-text"
+        [ngClass]="{'has-success' : registerForm.valid}">Регистрация</h1>
+
+    <form [formGroup]="registerForm" (submit)="login()" novalidate>
+
+
+      <div class="input-container"
+           [ngClass]="{'has-content' : registerForm.value.name.length > 0}">
+        <input [ngClass]="{'has-success' : registerForm.controls.name.valid}"
+               class="login-input" type="text" id="name" readonly
+               formControlName="name" (focus)="removeReadOnly($event)">
+        <label for="name" [ngClass]="{'has-success' : registerForm.controls.name.valid}">
+          Имя
+        </label>
+
+      </div>
+
+      <div class="input-container"
+           [ngClass]="{'has-content' : registerForm.value.surname.length > 0}">
+        <input [ngClass]="{'has-success' : registerForm.controls.surname.valid}"
+               class="login-input" type="text" id="surname" readonly
+               formControlName="surname" (focus)="removeReadOnly($event)">
+        <label for="surname" [ngClass]="{'has-success' : registerForm.controls.surname.valid}">
+          Фамилия
+        </label>
+
+      </div>
+
+      <div class="input-container"
+           [ngClass]="{'has-content' : registerForm.value.patronymicName.length > 0}">
+        <input [ngClass]="{'has-success' : registerForm.controls.patronymicName.valid}"
+               class="login-input" type="text" id="patronymicName" readonly
+               formControlName="patronymicName" (focus)="removeReadOnly($event)">
+        <label for="patronymicName" [ngClass]="{'has-success' : registerForm.controls.patronymicName.valid}">
+          Отчество
+        </label>
+
+      </div>
+
+      <div class="input-container"
+           [ngClass]="{'has-content' : registerForm.value.email.length > 0}">
+        <input [ngClass]="{'has-success' : registerForm.controls.email.valid}"
+               class="login-input" type="email" id="email" readonly
+               formControlName="email" (focus)="removeReadOnly($event)">
+        <label for="email" [ngClass]="{'has-success' : registerForm.controls.email.valid}">
+          Email
+        </label>
+      </div>
+
+      <div class="input-container"
+           [ngClass]="{'has-content' : registerForm.value.password.length > 0}">
+        <input [ngClass]="{'has-success' : registerForm.controls.password.valid}"
+               class="login-input" type="password" id="pass" readonly
+               formControlName="password" (focus)="removeReadOnly($event)">
+        <label for="pass" [ngClass]="{'has-success' : registerForm.controls.password.valid}">
+          Пароль
+        </label>
+      </div>
+
+      <div class="input-container"
+           [ngClass]="{'has-content' : registerForm.value.confirm.length > 0}">
+        <input [ngClass]="{'has-success' : registerForm.controls.confirm.valid}"
+               class="login-input" type="password" id="confirm" readonly
+               formControlName="confirm" (focus)="removeReadOnly($event)">
+        <label for="confirm" [ngClass]="{'has-success' : registerForm.controls.confirm.valid}">
+          Подтвердите пароль
+        </label>
+      </div>
+
+      <button [ngClass]="{'has-success' : registerForm.valid}"
+              class="login-button">зарегистрироваться</button>
+    </form>
+
+    <!--<span>Already registered ?</span>-->
+
+  </div>
+</div>
