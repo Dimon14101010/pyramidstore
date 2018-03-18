@@ -1,0 +1,35 @@
+<div class="main-container">
+  <div class="side-menu">
+    <div class="menu-header">
+      <h2>Магазин</h2>
+    </div>
+    <div class="menu-header">
+      <h3>Категории :</h3>
+    </div>
+    <a>Ноутбуки и компьютеры</a>
+    <a>Смартфоны и аксессуары</a>
+    <a>Бытовая техника</a>
+    <a>Товары для дома</a>
+    <a>Инструменты и автотовары</a>
+    <a>Сантехника и ремонт</a>
+    <a>Дача, сад и огород</a>
+    <a>Спорт и хобби</a>
+    <a>Одежда и обувь</a>
+    <a>Украшения и аксессуары</a>
+    <a>Красота и здоровье</a>
+    <a>Детские товары</a>
+    <a>Канцтовары и книги</a>
+    <a>Услуги и сервисы</a>
+    <a>Продукты питания</a>
+  </div>
+  <div class="main-content">
+    <!--<router-outlet></router-outlet>-->
+    <div *ngFor="let products of productList" class="shop-item"
+         [style.backgroundImage]="'url(' + imgUrl + products.src + ')'">
+      <div class="item-footer">
+        <div class="item-name">{{products.name}}</div>
+        <div class="item-price">{{products.price}} грн</div>
+      </div>
+    </div>
+  </div>
+</div>

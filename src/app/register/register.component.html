@@ -4,37 +4,37 @@
     <h1 class="header-text"
         [ngClass]="{'has-success' : registerForm.valid}">Регистрация</h1>
 
-    <form [formGroup]="registerForm" (submit)="login()" novalidate>
+    <form ngForm="registerForm" (ngSubmit)="login()" [formGroup]="registerForm" novalidate>
 
 
       <div class="input-container"
-           [ngClass]="{'has-content' : registerForm.value.name.length > 0}">
-        <input [ngClass]="{'has-success' : registerForm.controls.name.valid}"
-               class="login-input" type="text" id="name" readonly
-               formControlName="name" (focus)="removeReadOnly($event)">
-        <label for="name" [ngClass]="{'has-success' : registerForm.controls.name.valid}">
+           [ngClass]="{'has-content' : registerForm.value.firstName.length > 0}">
+        <input [ngClass]="{'has-success' : registerForm.controls.firstName.valid}"
+               class="login-input" type="text" id="firstName" readonly
+               formControlName="firstName" (focus)="removeReadOnly($event)">
+        <label for="firstName" [ngClass]="{'has-success' : registerForm.controls.firstName.valid}">
           Имя
         </label>
 
       </div>
 
       <div class="input-container"
-           [ngClass]="{'has-content' : registerForm.value.surname.length > 0}">
-        <input [ngClass]="{'has-success' : registerForm.controls.surname.valid}"
-               class="login-input" type="text" id="surname" readonly
-               formControlName="surname" (focus)="removeReadOnly($event)">
-        <label for="surname" [ngClass]="{'has-success' : registerForm.controls.surname.valid}">
+           [ngClass]="{'has-content' : registerForm.value.lastName.length > 0}">
+        <input [ngClass]="{'has-success' : registerForm.controls.lastName.valid}"
+               class="login-input" type="text" id="lastName" readonly
+               formControlName="lastName" (focus)="removeReadOnly($event)">
+        <label for="lastName" [ngClass]="{'has-success' : registerForm.controls.lastName.valid}">
           Фамилия
         </label>
 
       </div>
 
       <div class="input-container"
-           [ngClass]="{'has-content' : registerForm.value.patronymicName.length > 0}">
-        <input [ngClass]="{'has-success' : registerForm.controls.patronymicName.valid}"
+           [ngClass]="{'has-content' : registerForm.value.middleName.length > 0}">
+        <input [ngClass]="{'has-success' : registerForm.controls.middleName.valid}"
                class="login-input" type="text" id="patronymicName" readonly
-               formControlName="patronymicName" (focus)="removeReadOnly($event)">
-        <label for="patronymicName" [ngClass]="{'has-success' : registerForm.controls.patronymicName.valid}">
+               formControlName="middleName" (focus)="removeReadOnly($event)">
+        <label for="middleName" [ngClass]="{'has-success' : registerForm.controls.middleName.valid}">
           Отчество
         </label>
 

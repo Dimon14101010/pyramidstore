@@ -39,8 +39,13 @@ export class LoginComponent implements OnInit {
 
   login() {
     if (this.loginForm.valid) {
-      // this.backend.login().subscribe();
-      this.onSuccessLogin();
+      const data = Object.assign({}, this.loginForm.value);
+      this.backend.login(data).subscribe((response: any) => {
+        console.log(response)
+        if (response.result.statusCode === 200) {
+          this.onSuccessLogin();
+        }
+      });
     } else {
       console.log('no validate !!!');
     }

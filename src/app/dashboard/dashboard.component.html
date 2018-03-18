@@ -1,34 +1,57 @@
 <div class="main-container">
 
   <div class="top-menu">
-    top menu
+        <div class="menu-item">
+          <a routerLink="news" routerLinkActive="active">Новости</a>
+        </div>
+        <div class="menu-item">
+          <a routerLink="backOffice" routerLinkActive="active">Мой кабинет</a>
+        </div>
+        <div class="menu-item">
+          <a routerLink="documents" routerLinkActive="active">Документы</a>
+        </div>
+        <div class="menu-item">
+          <a routerLink="shop" routerLinkActive="active">Магазин</a>
+        </div>
+        <div class="menu-item">
+          <a routerLink="contacts" routerLinkActive="active">Контакты</a>
+        </div>
+        <div class="menu-item">
+          <a routerLink="" class="logout">Выход</a>
+        </div>
   </div>
 
   <div class="main-body">
 
-    <div class="side-menu">
-      <div class="menu-item">
-        <a routerLink="backOffice" routerLinkActive="active">My cabinet</a>
-      </div>
-      <div class="menu-item">
-        <a routerLink="documents" routerLinkActive="active">Document</a>
-      </div>
-      <div class="menu-item">
-        <a routerLink="shop" routerLinkActive="active">Shop</a>
-      </div>
-      <div class="menu-item">
-        <a routerLink="contacts" routerLinkActive="active">Contacts</a>
-      </div>
-    </div>
-
     <div class="main-data">
-      main data
-      <router-outlet></router-outlet>
+      <router-outlet>
+
+      </router-outlet>
     </div>
 
   </div>
   <div class="footer">
-    footer
+    <div>
+      first column
+      first column
+      first column
+      first column
+      first column
+    </div>
+    <div>
+      second column
+      second column
+      second column
+      second column
+      second column
+    </div>
+    <div>
+      third column
+      third column
+      third column
+      third column
+      third column
+    </div>
   </div>
 
 </div>

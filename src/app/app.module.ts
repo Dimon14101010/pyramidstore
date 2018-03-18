@@ -14,6 +14,10 @@ import {BackOfficeComponent} from "./dashboard/backoffice/back-office.component"
 import {DocumentsComponent} from "./dashboard/documents/documents.component";
 
 import { routes } from './routing';
+import {ContactsComponent} from "./dashboard/contacts/contacts.component";
+import {ShopComponent} from "./dashboard/shop/shop.component";
+import {NewsComponent} from "./dashboard/news/news.component";
+import {ShopService} from "./services/shop.service";
 
 @NgModule({
   declarations: [
@@ -23,7 +27,10 @@ import { routes } from './routing';
     FirstPageComponent,
     DashboardComponent,
     BackOfficeComponent,
-    DocumentsComponent
+    DocumentsComponent,
+    ContactsComponent,
+    ShopComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +38,7 @@ import { routes } from './routing';
     RouterModule.forRoot(routes),
     HttpClientModule
   ],
-  providers: [BackendService],
+  providers: [BackendService, ShopService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

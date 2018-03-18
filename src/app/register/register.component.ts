@@ -20,13 +20,13 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
-      name: new FormControl('', [
+      firstName: new FormControl('', [
         Validators.required,
       ]),
-      surname: new FormControl('', [
+      middleName: new FormControl('', [
         Validators.required,
       ]),
-      patronymicName: new FormControl('', [
+      lastName: new FormControl('', [
         Validators.required,
       ]),
       email: new FormControl('', [
@@ -57,7 +57,7 @@ export class RegisterComponent implements OnInit {
 
   login() {
     if (this.registerForm.valid) {
-      const data = Object.assign({}, this.registerForm.value)
+      const data = Object.assign({}, this.registerForm.value);
       console.log(data);
       this.backend.register(data).subscribe(response => console.log(response));
       // this.router.navigate(['dashboard']);

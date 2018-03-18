@@ -8,22 +8,14 @@ const httpOptions = {
   })
 };
 @Injectable()
-export class BackendService {
+export class ShopService {
 
   private baseUrl = 'https://pyramidst.herokuapp.com/api/';
 
   constructor (private http: HttpClient) {}
 
 
-
-  public register (body) {
-    console.log(body, httpOptions)
-    return this.http.post(this.baseUrl + 'Account/register', body, httpOptions);
-  }
-  public login (body) {
-    return this.http.post(this.baseUrl + 'Account/login', body, httpOptions);
-  }
   public getAll () {
-    return this.http.get('./assets/test/test.json');
+    return this.http.get('./assets/shop/product.json');
   }
 }

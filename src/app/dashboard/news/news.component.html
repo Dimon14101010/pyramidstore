@@ -1,0 +1,21 @@
+<div class="main-container">
+  <div class="side-menu">
+    <div class="menu-header">
+      <h2>Новости</h2>
+    </div>
+    <div class="menu-header">
+      <h3>Категории :</h3>
+    </div>
+    <a (click)="changeCategory('all',$event)">Все</a>
+    <a (click)="changeCategory('akciya',$event)">Акции</a>
+    <a (click)="changeCategory('news',$event)">Новости</a>
+    <a (click)="changeCategory('results',$event)">Результаты</a>
+  </div>
+  <div class="main-content">
+    <div *ngFor="let news of filteredList" class="news-content">
+      <div class="news-header">{{news.title}}</div>
+      <div class="news-body">{{news.body}}</div>
+      <div class="news-footer">{{news.category}}</div>
+    </div>
+  </div>
+</div>
